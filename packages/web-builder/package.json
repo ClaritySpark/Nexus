@@ -1,0 +1,9 @@
+{
+  "name": "@clarity/web-builder",
+  "packageManager": "yarn@4.4.1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "author": "",
+  "license": "ISC"
+}
