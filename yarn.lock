@@ -234,11 +234,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@clarity/core@npm:*, @clarity/core@workspace:packages/core":
+  version: 0.0.0-use.local
+  resolution: "@clarity/core@workspace:packages/core"
+  dependencies:
+    "@clarity/shared": "npm:*"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+  languageName: unknown
+  linkType: soft
+
+"@clarity/shared@npm:*, @clarity/shared@workspace:packages/shared":
+  version: 0.0.0-use.local
+  resolution: "@clarity/shared@workspace:packages/shared"
+  languageName: unknown
+  linkType: soft
+
 "@clarity/web-builder-example@workspace:packages/example":
   version: 0.0.0-use.local
   resolution: "@clarity/web-builder-example@workspace:packages/example"
   dependencies:
-    "@clarity/web-builder": "npm:*"
+    "@clarity/core": "npm:*"
     "@eslint/js": "npm:^9.9.0"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
@@ -252,12 +268,6 @@ __metadata:
     typescript: "npm:^5.5.3"
     typescript-eslint: "npm:^8.0.1"
     vite: "npm:^5.4.1"
-  languageName: unknown
-  linkType: soft
-
-"@clarity/web-builder@npm:*, @clarity/web-builder@workspace:packages/web-builder":
-  version: 0.0.0-use.local
-  resolution: "@clarity/web-builder@workspace:packages/web-builder"
   languageName: unknown
   linkType: soft
 

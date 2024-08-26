@@ -1,0 +1,14 @@
+{
+  "name": "@clarity/core",
+  "packageManager": "yarn@4.4.1",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@clarity/shared": "*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

@@ -15,18 +15,23 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:."\
     },\
     {\
+      "name": "@clarity/core",\
+      "reference": "workspace:packages/core"\
+    },\
+    {\
       "name": "@clarity/web-builder-example",\
       "reference": "workspace:packages/example"\
     },\
     {\
-      "name": "@clarity/web-builder",\
-      "reference": "workspace:packages/web-builder"\
+      "name": "@clarity/shared",\
+      "reference": "workspace:packages/shared"\
     }\
   ],\
   "enableTopLevelFallback": true,\
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
-    ["@clarity/web-builder", ["workspace:packages/web-builder"]],\
+    ["@clarity/core", ["workspace:packages/core"]],\
+    ["@clarity/shared", ["workspace:packages/shared"]],\
     ["@clarity/web-builder-example", ["workspace:packages/example"]],\
     ["web-builder", ["workspace:."]]\
   ],\
@@ -330,11 +335,23 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@clarity/web-builder", [\
-      ["workspace:packages/web-builder", {\
-        "packageLocation": "./packages/web-builder/",\
+    ["@clarity/core", [\
+      ["workspace:packages/core", {\
+        "packageLocation": "./packages/core/",\
         "packageDependencies": [\
-          ["@clarity/web-builder", "workspace:packages/web-builder"]\
+          ["@clarity/core", "workspace:packages/core"],\
+          ["@clarity/shared", "workspace:packages/shared"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:c788498f7c80bc3aa6ea352c39c6bf32cc363fd6bfabb584d7f2c93a2d8c9861ab1ec6844636d680b539f4fb00a9b9b2da89ade8f92f60b973f1878c9ef2a709#npm:18.3.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@clarity/shared", [\
+      ["workspace:packages/shared", {\
+        "packageLocation": "./packages/shared/",\
+        "packageDependencies": [\
+          ["@clarity/shared", "workspace:packages/shared"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -344,7 +361,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/example/",\
         "packageDependencies": [\
           ["@clarity/web-builder-example", "workspace:packages/example"],\
-          ["@clarity/web-builder", "workspace:packages/web-builder"],\
+          ["@clarity/core", "workspace:packages/core"],\
           ["@eslint/js", "npm:9.9.1"],\
           ["@types/react", "npm:18.3.4"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -2968,6 +2985,21 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["react-dom", "virtual:a3c5a07b112c9da75c07195f102c1601c9aae2dcbc35f8c20bd9e36a3f2f93c651fb2828a3b5f74f78473b675ef9cee8bc73ccd6bf3a89b4f3e45aba2baf4c2a#npm:18.3.1"],\
           ["@types/react", "npm:18.3.4"],\
+          ["loose-envify", "npm:1.4.0"],\
+          ["react", "npm:18.3.1"],\
+          ["scheduler", "npm:0.23.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:c788498f7c80bc3aa6ea352c39c6bf32cc363fd6bfabb584d7f2c93a2d8c9861ab1ec6844636d680b539f4fb00a9b9b2da89ade8f92f60b973f1878c9ef2a709#npm:18.3.1", {\
+        "packageLocation": "./.yarn/__virtual__/react-dom-virtual-14dcbdf88e/2/.yarn/berry/cache/react-dom-npm-18.3.1-a805663f38-10c0.zip/node_modules/react-dom/",\
+        "packageDependencies": [\
+          ["react-dom", "virtual:c788498f7c80bc3aa6ea352c39c6bf32cc363fd6bfabb584d7f2c93a2d8c9861ab1ec6844636d680b539f4fb00a9b9b2da89ade8f92f60b973f1878c9ef2a709#npm:18.3.1"],\
+          ["@types/react", null],\
           ["loose-envify", "npm:1.4.0"],\
           ["react", "npm:18.3.1"],\
           ["scheduler", "npm:0.23.2"]\

@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@clarity/web-builder": "*",
+    "@clarity/core": "*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
