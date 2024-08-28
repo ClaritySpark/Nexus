@@ -1,1 +1,1 @@
-export const ELEMENTS = 1;
+export * from "./DraggableBox";
